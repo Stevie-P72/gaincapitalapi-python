@@ -22,13 +22,13 @@ def check_span(interval, span):
     :param interval: time interval, can be min, hour, day, week, month
     :param span: span of time, it can be 1, 2, 3, 5, etc,,"""
     if interval == 'HOUR':
-        if span not in SPAN_H:
+        if span not in [SPAN_H, str(SPAN_H)]:
             span = 1
             return span
         else:
             return span
     elif interval == 'MINUTE':
-        if span not in SPAN_M:
+        if span not in [SPAN_M, str(SPAN_M)]:
             span = 1
             return span
         else:
